@@ -6,12 +6,9 @@ import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
   {
+    //pagina principale
     path: '',
     component: LoginComponent
-  },
-  {
-    path: '**',
-    component: ErrorComponent
   },
   {
     path: 'login',
@@ -20,7 +17,12 @@ const routes: Routes = [
   {
     path: 'welcome',
     component: WelcomeComponent
-  }
+  },
+  //gestione delle rotte che non esistono
+  {
+    path: '**',
+    component: ErrorComponent
+  },
 ];
 
 @NgModule({
