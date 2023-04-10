@@ -1,8 +1,8 @@
 <h1>Lista prodotti:</h1>
 <div class="container">
-  <table>
+  <table class="table table-hover">
     <thead>
-      <tr>
+      <tr class="fw-bold">
         <td>Codice</td>
         <td>Descrizione</td>
         <td>UM</td>
@@ -16,7 +16,7 @@
     <tbody>
       <tr *ngFor="let articolo of articoli">
         <td>{{ articolo.codart }}</td>
-        <td>{{ articolo.descrizione }}</td>
+        <td class="fw-bold">{{ articolo.descrizione }}</td>
         <td>{{ articolo.um }}</td>
         <td>{{ articolo.pzcart }}</td>
         <td>{{ articolo.peso }}</td>
