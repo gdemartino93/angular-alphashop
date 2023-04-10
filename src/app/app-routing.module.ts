@@ -24,7 +24,8 @@ const routes: Routes = [
   },
   {
     path: 'articoli',
-    component: ArticoliComponent
+    component: ArticoliComponent,
+    canActivate : [RouteGuardService]
   },
   {
     path: 'logout',

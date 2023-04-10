@@ -11,8 +11,6 @@ export class RouteGuardService implements CanActivate {
   constructor(private BasicAuth: AuthappService) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    throw new Error('Method not implemented.');
-
     //verifica se l'utente è loggato e restituisce true altrimenti restituirà false
     //quindi questa è la condizione per usare guard e quindi accedere alle rotte
     return this.BasicAuth.isLogged();
