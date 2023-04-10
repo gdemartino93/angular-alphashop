@@ -15,4 +15,8 @@ export class AuthappService {
     }
     return user;
   }
+
+  loggedUser = () : string | null => (sessionStorage.getItem("Utente") ?? "")
+
+  isLogged = () : boolean => (sessionStorage.getItem('Utente') ? true :false)
 }
