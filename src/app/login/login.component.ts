@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,21 +11,19 @@ export class LoginComponent implements OnInit {
   userId : string = ""
   password : string = ""
   autenticato : boolean = true
-  consentito : boolean = false
   errorMsg : string = "Spiacente Id e Password non sono validi"
-  authMsg : string = "Benvenuto"
-  constructor() { }
+
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
 
   gestAuth= (): void => {
     if(this.userId === "Luca" && this.password === "luca"){
-      this.consentito = true
       this.autenticato = true
+      this.route.navigate(['welcome'])
     }else{
       this.autenticato = false
-      this.consentito = false
     }
   }
 }
