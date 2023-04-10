@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ErrorComponent } from './error/error.component';
+import { ArticoliComponent } from './articoli/articoli.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'welcome/:userid',
     component: WelcomeComponent
+  },
+  {
+    path: 'articoli',
+    component: ArticoliComponent
   },
   //gestione delle rotte che non esistono
   {
