@@ -19,4 +19,6 @@ export class AuthappService {
   loggedUser = () : string | null => (sessionStorage.getItem("Utente") ?? "")
 
   isLogged = () : boolean => (sessionStorage.getItem('Utente') ? true :false)
+
+  clearUser = () : void => sessionStorage.removeItem('Utente');
 }
