@@ -37,9 +37,10 @@
           <img class="img-circle" src="/assets/images/user.png" width="38" height="38">
         </button>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Accedi</a></li>
-          <li><a class="dropdown-item" href="#">Registrati</a></li>
-          <li><a class="dropdown-item" href="#">Disabilita</a></li>
+          <li><a class="dropdown-item" routerLink="">Home</a></li>
+
+          <li><a class="dropdown-item" href="#" *ngIf="!BasicAuth.isLogged()">Accedi</a></li>
+          <li><a class="dropdown-item" href="#" *ngIf="!BasicAuth.isLogged()">Registrati</a></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="#" *ngIf="BasicAuth.isLogged()" (click)="BasicAuth.clearUser()" routerLink="logout">Logout {{ BasicAuth.loggedUser() }}</a></li>
           <li><a class="dropdown-item disabled" *ngIf="!BasicAuth.isLogged()" href="#">Logout</a></li>

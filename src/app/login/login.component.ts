@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   sottotitolo : string = "Inserisci ID e Password"
   show : boolean = true;
 
-  constructor(private route: Router, private BasicAuth : AuthappService ) { }
+  constructor(private route: Router, public BasicAuth : AuthappService ) { }
 
   ngOnInit(): void {
   }

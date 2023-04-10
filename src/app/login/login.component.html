@@ -6,6 +6,7 @@
   <div class="alert alert-danger" role="alert" *ngIf="!autenticato">
     Mi dispiace i dati inseriti non sono corretti
   </div>
+  <div *ngIf="!BasicAuth.isLogged()">
     <div class="mb-3">
       <label for="userid" class="form-label">Email address</label>
       <input type="email" class="form-control" id="userid" [(ngModel)]="userId" aria-describedby="emailHelp">
@@ -15,5 +16,7 @@
       <input type="password" class="form-control" id="password" [(ngModel)]="password">
     </div>
     <button (click)="gestAuth()" class="btn btn-primary">Submit</button>
+  </div>
+
 </div>
 
