@@ -1,7 +1,8 @@
 <div class="card" style="width: 18rem;">
-  <img src="assets/images/prodotti/barilla.jpg" class="card-img-top" alt="...">
+  <img src="{{ articolo.imageUrl }}" class="card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h6>{{ articolo.descrizione }}</h6>
+    <p class="card-text">{{ articolo.prezzo | currency :'EUR' }}</p>
     <div class="d-flex justify-content-between">
       <button class="btn btn-outline-warning">Modifica</button>
       <button class="btn btn-outline-danger">Elimina</button>
