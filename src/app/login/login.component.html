@@ -1,12 +1,19 @@
-<app-jumbotron [Titolo]="titolo" [SottoTitolo]="sottotitolo"></app-jumbotron>
-<div>
-  <label for="usedId">User Id:</label>
-  <input type="text" name="userId" placeholder="Inserisci l'id" [(ngModel)]="userId">
-  <label for="password">Password:</label>
-  <input type="password" name="password" placeholder="Inserisci la password" [(ngModel)]="password">
-  <button type="submit" (click)="gestAuth()">Accedi</button>
-</div>
-<div *ngIf="!autenticato">
-  <h1>{{ errorMsg }}</h1>
+<app-jumbotron [Titolo]="titolo" [SottoTitolo]="sottotitolo" [Show]="show"></app-jumbotron>
+
+
+
+<div class="container">
+  <div class="alert alert-danger" role="alert" *ngIf="!autenticato">
+    Mi dispiace i dati inseriti non sono corretti
+  </div>
+    <div class="mb-3">
+      <label for="userid" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="userid" [(ngModel)]="userId" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" [(ngModel)]="password">
+    </div>
+    <button (click)="gestAuth()" class="btn btn-primary">Submit</button>
 </div>
 

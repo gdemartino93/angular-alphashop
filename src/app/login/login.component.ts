@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   errorMsg : string = "Spiacente Id e Password non sono validi"
   titolo : string = "Accesso & Autenticazione"
   sottotitolo : string = "Inserisci ID e Password"
-
+  show : boolean = true;
   constructor(private route: Router) { }
 
   ngOnInit(): void {
