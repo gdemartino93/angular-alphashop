@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { log } from 'console';
 import { IArticoli } from 'src/app/models/Articoli';
 import { ArticoliService } from 'src/services/articoli.service';
 
@@ -15,6 +16,7 @@ export class GridArticoliComponent implements OnInit {
   //mounted
   ngOnInit(): void {
     this.articoli$ = this.articoliService.getArticoli();
+    console.log(this.articoli$)
   }
 
 }
