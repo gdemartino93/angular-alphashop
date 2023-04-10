@@ -1,6 +1,6 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input,Output, OnInit, EventEmitter } from '@angular/core';
 import { IArticoli } from 'src/app/models/Articoli';
-import { EventEmitter } from 'stream';
+
 
 @Component({
   selector: 'app-articoli-card',
@@ -20,17 +20,23 @@ export class ArticoliCardComponent implements OnInit {
   attivo : true,
   data : new Date(),
   imageUrl : ''
- }
+ };
 
- @Output()
-  delete = new EventEmitter();
+@Output()
+delete = new EventEmitter();
 
- @Output()
-  edit = new EventEmitter();
+@Output()
+edit = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  editArt = () => {
+    this.edit.emit(this.articolo.codart)
+  }
+  deleteArt = () => {
+    this.delete.emit(this.articolo.codart)
+  }
 }
