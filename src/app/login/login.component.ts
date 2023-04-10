@@ -12,6 +12,8 @@ export class LoginComponent implements OnInit {
   password : string = ""
   autenticato : boolean = true
   errorMsg : string = "Spiacente Id e Password non sono validi"
+  titolo : string = "Accesso & Autenticazione"
+  sottotitolo : string = "Inserisci ID e Password"
 
   constructor(private route: Router) { }
 
