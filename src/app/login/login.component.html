@@ -1,1 +1,5 @@
-<p>login works!</p>
+<label for="usedId">User Id:</label>
+<input type="text" name="userId" placeholder="Inserisci l'id" [(ngModel)]="userId" value="{{ userId }}">
+<label for="password">Password:</label>
+<input type="password" name="password" placeholder="Inserisci la password" value="{{ password }}">
+<button type="submit" (click)="gestAut()">Accedi</button>
