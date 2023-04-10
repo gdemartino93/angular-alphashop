@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   gestAuth= (): void => {
-    if(this.userId === "Luca" && this.password === "luca"){
+    if(this.BasicAuth.autentica(this.userId,this.password)){
       this.autenticato = true
       this.route.navigate(['welcome',this.userId])
     }else{
