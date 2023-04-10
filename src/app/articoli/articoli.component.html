@@ -9,6 +9,8 @@
         <td>PZCART</td>
         <td>Peso</td>
         <td>Prezzo</td>
+        <td>Attivo</td>
+        <td>Data</td>
       </tr>
     </thead>
     <tbody>
@@ -18,7 +20,9 @@
         <td>{{ articolo.um }}</td>
         <td>{{ articolo.pzcart }}</td>
         <td>{{ articolo.peso }}</td>
-        <td>{{ articolo.prezzo }}</td>
+        <td>{{ articolo.prezzo | currency: 'EUR' }}</td>
+        <td>{{ articolo.attivo ? 'si' : 'no' }}</td>
+        <td>{{ articolo.data | date : 'short' }}</td>
       </tr>
     </tbody>
   </table>

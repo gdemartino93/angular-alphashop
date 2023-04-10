@@ -5,6 +5,6 @@ export interface IArticoli{
   pzcart : number,
   peso : number,
   prezzo : number,
-  active : boolean,
+  attivo : boolean,
   data : Date
 }
