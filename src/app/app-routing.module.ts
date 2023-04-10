@@ -5,6 +5,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ErrorComponent } from './error/error.component';
 import { ArticoliComponent } from './articoli/articoli.component';
 import { LogoutComponent } from './logout/logout.component';
+import { RouteGuardService } from 'src/services/route-guard.service';
 
 const routes: Routes = [
   {
@@ -18,7 +19,8 @@ const routes: Routes = [
   },
   {
     path: 'welcome/:userid',
-    component: WelcomeComponent
+    component: WelcomeComponent,
+    canActivate : [RouteGuardService]
   },
   {
     path: 'articoli',
