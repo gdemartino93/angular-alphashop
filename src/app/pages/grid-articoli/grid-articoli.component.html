@@ -36,7 +36,7 @@
       <!-- passiamo la var articolo (ottenuta ciclando let articolo of articoli$) al input articolo nel componente figlio articoli-card -->
     <app-articoli-card *ngFor="let articolo of articoli$" [articolo]="articolo" (delete)="handleDelete($event)" (edit)="handleEdit($event)"></app-articoli-card>
   </div>
-  <div class="d-flex justify-content-center align-items-center" *ngIf="!articoli$">
+  <div class="d-flex justify-content-center align-items-center" *ngIf="articoli$.length == 0">
     <h1 class="text-danger">Nessun elemento presente</h1>
   </div>
 </div>
