@@ -15,7 +15,7 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'welcome',
+    path: 'welcome/:userid',
     component: WelcomeComponent
   },
   //gestione delle rotte che non esistono
