@@ -6,5 +6,6 @@ export interface IArticoli{
   peso : number,
   prezzo : number,
   attivo : boolean,
-  data : Date
+  data : Date,
+  imageUrl : string
 }
